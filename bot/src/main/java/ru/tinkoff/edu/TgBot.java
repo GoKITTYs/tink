@@ -5,8 +5,7 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.request.SetMyCommands;
 
 
-public class CreateBot {
-
+public class TgBot {
     static TelegramBot bot;
     BotCommand[] commands = {
             new BotCommand("start", "зарегестрировать пользователя"),
@@ -15,7 +14,7 @@ public class CreateBot {
             new BotCommand("untrack", "прекратить отслеживание ссылки"),
             new BotCommand("list", "показать список отслеживаемых ссылок")
     };
-    CreateBot(String token){
+    TgBot(String token){
         bot = new TelegramBot(token);
         bot.execute(new SetMyCommands(commands));
         bot.setUpdatesListener(new BotUpdater(bot));

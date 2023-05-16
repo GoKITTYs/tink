@@ -19,7 +19,6 @@ public class ScrapperClient {
     }
     
     public String addChat(Long id) {
-
         return webClient.post().uri("/tg-chat/{id}", id)
                 .header("tg_chat_id", String.valueOf(id))
                 .header("Content-Type", "application/json").retrieve()

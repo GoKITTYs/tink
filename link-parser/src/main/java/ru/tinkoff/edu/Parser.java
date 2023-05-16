@@ -1,13 +1,11 @@
 package ru.tinkoff.edu;
 
 import ru.tinkoff.edu.data.GitHub;
-import ru.tinkoff.edu.data.StackOverFlow;
+import ru.tinkoff.edu.data.SOW;
 import ru.tinkoff.edu.parsers.GitHubParser;
-import ru.tinkoff.edu.parsers.StackOverFlowParser;
+import ru.tinkoff.edu.parsers.SOWParser;
 
-import java.util.Scanner;
-
-public class ParserURL {
+public class Parser {
     public void parse(String link) {
         try {
 
@@ -19,8 +17,8 @@ public class ParserURL {
                 System.out.println(response);
             }
             else if (link.contains("stackoverflow.com")) {
-                String data = new StackOverFlowParser().parse(link);
-                StackOverFlow response = new StackOverFlow(data);
+                String data = new SOWParser().parse(link);
+                SOW response = new SOW(data);
                 System.out.println(response);
             }else {
                 throw new RuntimeException("something wrong");
@@ -33,7 +31,7 @@ public class ParserURL {
     }
 
     public static void main(String[] args) {
-        new ParserURL().parse("https://github.com/sanyarnd/tinkoff-java-course-2022/");
+        new Parser().parse("https://github.com/sanyarnd/tinkoff-java-course-2022/");
     }
 
 }

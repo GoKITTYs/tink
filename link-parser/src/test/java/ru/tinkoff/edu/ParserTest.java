@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 
 public class ParserTest {
-    static ParserURL parser;
+    static Parser parser;
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
-        parser = new ParserURL();
+        parser = new Parser();
     }
     @Test
     void testStackUnsup()
