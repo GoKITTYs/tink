@@ -16,9 +16,9 @@ import java.sql.Timestamp;
 @SpringBootApplication
 @EnableScheduling
 @EnableConfigurationProperties(ApplicationConfig.class)
-public class ScrapperApplication {
+public class ScrapperApp {
 public static void main(String[] args) throws URISyntaxException {
-        var ctx = SpringApplication.run(ScrapperApplication.class, args);
+        var ctx = SpringApplication.run(ScrapperApp.class, args);
         //ApplicationConfig config = ctx.getBean(ApplicationConfig.class);
         //new BotClient().updateLink();
         //System.err.println(new StackOverflowClient().fetchQuestion(1642028));

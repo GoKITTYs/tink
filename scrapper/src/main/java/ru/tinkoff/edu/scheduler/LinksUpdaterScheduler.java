@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.schedule;
+package ru.tinkoff.edu.scheduler;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,9 +14,7 @@ import java.sql.*;
 @Component
 @RequiredArgsConstructor
 public class LinksUpdaterScheduler {
-    private final RabbitTemplate rabbitTemplate;
     JdbcLinkService service;
-
     {
         try {
             service = new JdbcLinkService();
@@ -24,11 +22,8 @@ public class LinksUpdaterScheduler {
             throw new RuntimeException(e);
         }
     }
-
     @Scheduled(fixedDelayString = "#{@schedulerIntervalMs}")
     public void update() throws SQLException, URISyntaxException {
-        //Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/scrapper", "postgres","postgres");
-
         service.update();
 
     }

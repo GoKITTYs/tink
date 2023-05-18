@@ -3,13 +3,14 @@ package ru.tinkoff.edu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import ru.tinkoff.edu.config.ApplicationConfig;
+import ru.tinkoff.edu.bot.TgBot;
+import ru.tinkoff.edu.config.AppConfig;
 
 @SpringBootApplication
-@EnableConfigurationProperties(ApplicationConfig.class)
-public class BotApplication {
+@EnableConfigurationProperties(AppConfig.class)
+public class BotApp {
 public static void main(String[] args) {
-        var ctx = SpringApplication.run(BotApplication.class, args);
-        new TgBot(ctx.getBean("BOT", Bot.class).getToken());
+        var ctx = SpringApplication.run(BotApp.class, args);
+        new TgBot("5659789777:AAHulErrrvaJI7kBIvLr6bxx9YlStcpU_M0");
         }
 }

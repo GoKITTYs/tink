@@ -1,12 +1,10 @@
 package ru.tinkoff.edu.config;
 
 import jakarta.validation.constraints.NotNull;
-import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
-import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.annotation.Validated;
-import ru.tinkoff.edu.schedule.Scheduler;
+import ru.tinkoff.edu.scheduler.Scheduler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

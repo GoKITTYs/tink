@@ -8,7 +8,7 @@ import ru.tinkoff.edu.dto.AddLinkRequest;
 
 @Component
 @RequiredArgsConstructor
-public class Producer {
+public class RabbitProducer {
 
     private final RabbitTemplate rabbitTemplate;
 

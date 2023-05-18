@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
-import ru.tinkoff.edu.TgBot;
+import ru.tinkoff.edu.bot.TgBot;
 import ru.tinkoff.edu.dto.ApiErrorResponse;
 import ru.tinkoff.edu.dto.LinkUpdaterRequest;
 
@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 @RequestMapping("/updates")
 @RestController
-public class LinkUpdatesController {
+public class LinksController {
 
     @ApiResponse(responseCode = "200", description = "Обновление обработано")
     @ApiResponse(responseCode = "400", description = "Некорректные параметры запроса")

@@ -18,18 +18,18 @@ public class ParserTest {
     {
         System.out.println("======TEST ONE EXECUTED=======");
         Assertions.assertThrows(RuntimeException.class, () ->{
-                    parser.parse("https://stackoverflow.com/search?q=unsupported%20link");
+                    parser.parseURL("https://stackoverflow.com/search?q=unsupported%20link");
                 });
     }
     @Test
     void testStackSupp()
     {
-            parser.parse("https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c");
+            parser.parseURL("https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c");
     }
     @Test
     void testGitSupp()
     {
-            parser.parse("https://github.com/sanyarnd/tinkoff-java-course-2022");
+            parser.parseURL("https://github.com/sanyarnd/tinkoff-java-course-2022");
     }
 
 }

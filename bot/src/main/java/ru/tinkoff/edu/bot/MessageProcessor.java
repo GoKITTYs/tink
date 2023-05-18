@@ -1,4 +1,4 @@
-package ru.tinkoff.edu;
+package ru.tinkoff.edu.bot;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +21,7 @@ import java.net.URISyntaxException;
 
 import java.util.List;
 
-public class BotUpdater implements UpdatesListener {
+public class MessageProcessor implements UpdatesListener {
 
     String comand;
     TelegramBot bot;
@@ -31,7 +31,7 @@ public class BotUpdater implements UpdatesListener {
 
 
 
-    public BotUpdater (TelegramBot bot){
+    public MessageProcessor(TelegramBot bot){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory());
         rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
         this.rabbitTemplate = rabbitTemplate;

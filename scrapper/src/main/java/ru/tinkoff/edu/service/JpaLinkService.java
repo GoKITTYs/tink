@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.tinkoff.edu.entity.Link;
-import ru.tinkoff.edu.repository.LinkRepository;
+import ru.tinkoff.edu.dao.LinkDAO;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class JpaLinkService {
 
     @Autowired
-    LinkRepository repository;
+    LinkDAO repository;
 
     @Transactional
     public Link save(Link link) {

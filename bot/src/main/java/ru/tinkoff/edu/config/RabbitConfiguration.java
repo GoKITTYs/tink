@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RabbitMQConfiguration {
+public class RabbitConfiguration {
 
     @Bean
     public DirectExchange directExchange() {
@@ -60,10 +60,6 @@ public class RabbitMQConfiguration {
         cachingConnectionFactory.setUsername("guest");
         cachingConnectionFactory.setPassword("guest");
         return cachingConnectionFactory;
-    }
-    @Bean
-    public AmqpAdmin amqpAdmin() {
-        return new RabbitAdmin(connectionFactory());
     }
     @Bean
     public MessageConverter jsonMessageConverter() {

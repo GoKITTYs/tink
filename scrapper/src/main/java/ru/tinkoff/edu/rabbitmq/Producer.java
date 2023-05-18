@@ -20,12 +20,10 @@ public class Producer {
 
     private final RabbitTemplate rabbitTemplate;
 
-
     public void sendUpdate(Integer id, URI url, String description, Integer[] ids) {
         rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
         rabbitTemplate.convertAndSend("update", new LinkUpdaterResponse(id, url, description, ids));
     }
-
 
     @PostMapping
     public void sendMessage(@RequestBody LinkResponse request) {
