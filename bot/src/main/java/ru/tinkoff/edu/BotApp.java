@@ -11,6 +11,6 @@ import ru.tinkoff.edu.config.AppConfig;
 public class BotApp {
 public static void main(String[] args) {
         var ctx = SpringApplication.run(BotApp.class, args);
-        new TgBot("5659789777:AAHulErrrvaJI7kBIvLr6bxx9YlStcpU_M0");
+        new TgBot("6270192892:AAH-uP3Q_bOJWlkr-LMs0Yr3hFJygBgc-oA");
         }
 }
